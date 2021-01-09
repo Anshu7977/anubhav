@@ -113,7 +113,6 @@ def insertChallenges():
 @app.route('/fetchChallenges', methods=['GET','POST'])
 @cross_origin(support_credentials=True)
 def fetchChallenges():
-
     records = db.challenges
     response = dumps(records.find())
     return (response)
